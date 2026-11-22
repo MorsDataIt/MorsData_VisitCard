@@ -2,552 +2,637 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#071525">
-  <meta name="description" content="MorsData – odzyskiwanie i przetwarzanie danych, strony internetowe, aplikacje, automatyzacja i testowanie oprogramowania.">
-  <title>MorsData – Odzyskiwanie i przetwarzanie danych | Usługi IT</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#071525">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    <title>MorsData Gdynia – Odzyskiwanie i przetwarzanie danych | Usługi IT</title>
+
+    <meta name="description" content="MorsData Gdynia – pomoc w odzyskiwaniu danych, przetwarzanie i analiza informacji, tworzenie stron internetowych, aplikacji oraz automatyzacja procesów IT.">
+
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://morsdata.pl/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="MorsData – Odzyskiwanie i przetwarzanie danych">
+    <meta property="og:description" content="Usługi IT, odzyskiwanie i przetwarzanie danych, aplikacje i automatyzacja. Gdynia.">
+    <meta property="og:url" content="https://morsdata.pl/">
+    <meta property="og:locale" content="pl_PL">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "MorsData",
+        "url": "https://morsdata.pl/",
+        "email": "MorsDataIt@gmail.com",
+        "telephone": "+48664467212",
+        "taxID": "9581599752",
+        "identifier": {
+            "@type": "PropertyValue",
+            "propertyID": "REGON",
+            "value": "522918640"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Starowiejska 35/7",
+            "postalCode": "81-363",
+            "addressLocality": "Gdynia",
+            "addressCountry": "PL"
+        },
+        "areaServed": {
+            "@type": "City",
+            "name": "Gdynia"
+        },
+        "description": "MorsData oferuje usługi IT, pomoc w odzyskiwaniu danych, przetwarzanie i analizę informacji, tworzenie stron internetowych i aplikacji, automatyzację procesów oraz testowanie oprogramowania."
     }
+    </script>
 
-    html {
-      scroll-behavior: smooth;
-    }
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #071525;
-      color: #e8f1f8;
-      line-height: 1.6;
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #071525;
+            color: #e8f1f8;
+            line-height: 1.6;
+        }
 
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(7, 21, 37, 0.96);
-      border-bottom: 1px solid #17344a;
-      padding: 18px 7%;
-    }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
+        }
 
-    .logo {
-      font-size: 25px;
-      font-weight: bold;
-      color: #35d0c3;
-    }
+        header {
+            background: #091b2e;
+            border-bottom: 1px solid rgba(53, 208, 195, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
 
-    .logo span {
-      display: block;
-      font-size: 11px;
-      letter-spacing: 3px;
-      color: #a8bdce;
-      font-weight: normal;
-    }
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 75px;
+        }
 
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 25px;
-      flex-wrap: wrap;
-    }
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #35d0c3;
+            letter-spacing: 1px;
+        }
 
-    nav a:hover {
-      color: #35d0c3;
-    }
+        nav {
+            display: flex;
+            gap: 28px;
+        }
 
-    .hero {
-      text-align: center;
-      padding: 95px 20px 75px;
-      background: linear-gradient(135deg, #0b2035, #102f43);
-    }
+        nav a {
+            color: #c8d7e5;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
 
-    .hero h1 {
-      font-size: clamp(32px, 5vw, 52px);
-      margin-bottom: 15px;
-    }
+        nav a:hover {
+            color: #35d0c3;
+        }
 
-    .hero h1 span {
-      color: #35d0c3;
-    }
+        .hero {
+            padding: 105px 0 110px;
+            background: linear-gradient(135deg, #071525, #0d2942);
+        }
 
-    .hero p {
-      color: #b5c7d5;
-      font-size: 18px;
-      max-width: 700px;
-      margin: 0 auto 28px;
-    }
+        .hero-content {
+            max-width: 760px;
+        }
 
-    .button {
-      display: inline-block;
-      background: #35d0c3;
-      color: #071525;
-      padding: 13px 25px;
-      border-radius: 6px;
-      font-weight: bold;
-    }
+        .hero-label {
+            color: #35d0c3;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
 
-    .button:hover {
-      background: #69e4d9;
-    }
+        h1 {
+            font-size: 48px;
+            line-height: 1.15;
+            margin-bottom: 25px;
+        }
 
-    section {
-      padding: 65px 7%;
-    }
+        .hero p {
+            color: #b9cad9;
+            font-size: 18px;
+            max-width: 680px;
+            margin-bottom: 32px;
+        }
 
-    .section-title {
-      text-align: center;
-      font-size: 30px;
-      margin-bottom: 15px;
-    }
+        .button {
+            display: inline-block;
+            padding: 13px 25px;
+            background: #35d0c3;
+            color: #071525;
+            font-weight: bold;
+            border-radius: 6px;
+            transition: background 0.2s, transform 0.2s;
+        }
 
-    .section-intro {
-      text-align: center;
-      color: #a8bdce;
-      max-width: 720px;
-      margin: 0 auto 35px;
-    }
+        .button:hover {
+            background: #62e4d8;
+            transform: translateY(-2px);
+        }
 
-    .featured-services {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 25px;
-      margin-bottom: 55px;
-    }
+        section {
+            padding: 85px 0;
+        }
 
-    .featured-card {
-      background: linear-gradient(145deg, #12334a, #0c2539);
-      border: 1px solid #277b82;
-      border-radius: 12px;
-      padding: 32px;
-    }
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
 
-    .featured-card h3 {
-      color: #35d0c3;
-      font-size: 23px;
-      margin-bottom: 12px;
-    }
+        .section-intro {
+            color: #aebfd0;
+            max-width: 720px;
+            margin-bottom: 38px;
+        }
 
-    .featured-card p,
-    .service-card p {
-      color: #b5c7d5;
-    }
+        .accent {
+            color: #35d0c3;
+        }
 
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
+        .services {
+            background: #091b2e;
+        }
 
-    .service-card {
-      background: #10263a;
-      border: 1px solid #1b4057;
-      padding: 25px;
-      border-radius: 10px;
-    }
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
 
-    .service-card h3 {
-      color: #35d0c3;
-      margin-bottom: 10px;
-    }
+        .service-card {
+            background: #10263c;
+            border: 1px solid rgba(53, 208, 195, 0.14);
+            border-radius: 10px;
+            padding: 27px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
 
-    #about {
-      background: #0b1e30;
-    }
+        .service-card:hover {
+            transform: translateY(-4px);
+            border-color: #35d0c3;
+        }
 
-    .about-content {
-      max-width: 850px;
-      margin: auto;
-      color: #b5c7d5;
-      text-align: center;
-    }
+        .service-card.featured {
+            border-color: rgba(53, 208, 195, 0.65);
+            background: linear-gradient(145deg, #12354a, #10263c);
+        }
 
-    #contact {
-      text-align: center;
-    }
+        .service-card h3 {
+            color: #35d0c3;
+            font-size: 19px;
+            margin-bottom: 12px;
+        }
 
-    .contact-content {
-      max-width: 850px;
-      margin: auto;
-    }
+        .service-card p {
+            color: #b9cad9;
+            font-size: 14px;
+        }
 
-    .contact-details {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      margin: 30px 0;
-      text-align: left;
-    }
+        .about {
+            background: #071525;
+        }
 
-    .contact-card {
-      background: #10263a;
-      border: 1px solid #1b4057;
-      border-radius: 10px;
-      padding: 22px;
-    }
+        .about-content {
+            max-width: 850px;
+        }
 
-    .contact-card h3 {
-      color: #35d0c3;
-      font-size: 17px;
-      margin-bottom: 8px;
-    }
+        .about-content p {
+            color: #b9cad9;
+            margin-bottom: 18px;
+        }
 
-    .contact-card p,
-    .contact-card a {
-      color: #b5c7d5;
-      overflow-wrap: anywhere;
-    }
+        .contact {
+            background: #091b2e;
+        }
 
-    .contact-card a:hover {
-      color: #35d0c3;
-    }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 35px;
+        }
 
-    .contact-form {
-      margin-top: 35px;
-      text-align: left;
-      background: #10263a;
-      border: 1px solid #1b4057;
-      border-radius: 12px;
-      padding: 30px;
-    }
+        .contact-card {
+            background: #10263c;
+            border: 1px solid rgba(53, 208, 195, 0.18);
+            border-radius: 9px;
+            padding: 24px;
+        }
 
-    .contact-form h3 {
-      color: #35d0c3;
-      font-size: 22px;
-      margin-bottom: 20px;
-    }
+        .contact-card h3 {
+            color: #35d0c3;
+            margin-bottom: 10px;
+            font-size: 17px;
+        }
 
-    .form-group {
-      margin-bottom: 18px;
-    }
+        .contact-card p,
+        .contact-card a {
+            color: #c3d2df;
+            font-size: 14px;
+        }
 
-    .contact-form label {
-      display: block;
-      margin-bottom: 7px;
-      color: #dceaf3;
-      font-weight: bold;
-    }
+        .contact-card a:hover {
+            color: #35d0c3;
+        }
 
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 13px;
-      border: 1px solid #31536b;
-      border-radius: 6px;
-      background: #071525;
-      color: #e8f1f8;
-      font: inherit;
-    }
+        .company-data {
+            background: #10263c;
+            border: 1px solid rgba(53, 208, 195, 0.3);
+            border-radius: 9px;
+            padding: 22px 25px;
+            margin-bottom: 35px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 35px;
+        }
 
-    .contact-form input:focus,
-    .contact-form textarea:focus {
-      outline: 2px solid #35d0c3;
-      border-color: #35d0c3;
-    }
+        .company-data h3 {
+            width: 100%;
+            color: #35d0c3;
+            font-size: 17px;
+            margin-bottom: 2px;
+        }
 
-    .contact-form textarea {
-      min-height: 150px;
-      resize: vertical;
-    }
+        .company-data p {
+            color: #c3d2df;
+            font-size: 14px;
+        }
 
-    .contact-form button {
-      border: 0;
-      cursor: pointer;
-      font: inherit;
-      font-weight: bold;
-      font-size: 16px;
-    }
+        .company-data strong {
+            color: #ffffff;
+        }
 
-    .privacy-note {
-      color: #91a9bb;
-      font-size: 12px;
-      margin-top: 15px;
-    }
+        .contact-form {
+            max-width: 700px;
+            background: #10263c;
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid rgba(53, 208, 195, 0.18);
+        }
 
-    footer {
-      text-align: center;
-      padding: 25px;
-      background: #04101d;
-      color: #8299aa;
-      font-size: 14px;
-    }
+        .contact-form h3 {
+            margin-bottom: 20px;
+            font-size: 21px;
+        }
 
-    @media (max-width: 750px) {
-      .contact-details {
-        grid-template-columns: 1fr;
-      }
-    }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 13px;
+            margin-bottom: 15px;
+            background: #071525;
+            border: 1px solid #29445d;
+            border-radius: 5px;
+            color: #ffffff;
+            font-family: inherit;
+            font-size: 14px;
+        }
 
-    @media (max-width: 650px) {
-      header {
-        padding: 15px 5%;
-      }
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: #35d0c3;
+        }
 
-      nav {
-        justify-content: center;
-      }
+        .contact-form textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
 
-      nav ul {
-        justify-content: center;
-        gap: 15px;
-      }
+        .contact-form button {
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+        }
 
-      .featured-services,
-      .service-grid {
-        grid-template-columns: 1fr;
-      }
+        .privacy-note {
+            margin-top: 15px;
+            color: #91a6b9;
+            font-size: 12px;
+        }
 
-      section {
-        padding: 50px 6%;
-      }
+        footer {
+            background: #05101d;
+            padding: 25px 0;
+            text-align: center;
+            color: #8196a9;
+            font-size: 13px;
+        }
 
-      .hero {
-        padding: 70px 20px;
-      }
+        @media (max-width: 750px) {
+            .service-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
 
-      .contact-form {
-        padding: 20px;
-      }
-    }
-  </style>
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 38px;
+            }
+
+            .hero {
+                padding: 80px 0;
+            }
+        }
+
+        @media (max-width: 550px) {
+            .nav {
+                flex-direction: column;
+                padding: 15px 0;
+                gap: 12px;
+            }
+
+            nav {
+                gap: 16px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 33px;
+            }
+
+            .section-title {
+                font-size: 27px;
+            }
+
+            section {
+                padding: 65px 0;
+            }
+
+            .contact-form {
+                padding: 22px;
+            }
+
+            .company-data {
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-  <header>
-    <nav>
-      <a href="#home" class="logo">
-        MorsData
-        <span>DATA & IT SOLUTIONS</span>
-      </a>
+<header>
+    <div class="container nav">
+        <a href="#start" class="logo">MorsData</a>
 
-      <ul>
-        <li><a href="#home">Start</a></li>
-        <li><a href="#services">Usługi</a></li>
-        <li><a href="#about">O firmie</a></li>
-        <li><a href="#contact">Kontakt</a></li>
-      </ul>
-    </nav>
-  </header>
+        <nav>
+            <a href="#start">Start</a>
+            <a href="#uslugi">Usługi</a>
+            <a href="#o-firmie">O firmie</a>
+            <a href="#kontakt">Kontakt</a>
+        </nav>
+    </div>
+</header>
 
-  <main>
-    <section class="hero" id="home">
-      <h1>Twoje dane. <span>Nasza technologia.</span></h1>
-      <p>
-        Odzyskiwanie i przetwarzanie danych oraz kompleksowe rozwiązania IT
-        wspierające działalność firm i klientów indywidualnych.
-      </p>
-      <a href="#contact" class="button">Skontaktuj się</a>
-    </section>
+<main>
 
-    <section id="services">
-      <h2 class="section-title">Nasze usługi</h2>
-      <p class="section-intro">
-        Pomagamy odzyskiwać, porządkować i wykorzystywać dane,
-        a także tworzymy rozwiązania informatyczne dopasowane do potrzeb.
-      </p>
+    <section class="hero" id="start">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-label">MorsData – Data & IT Solutions</div>
 
-      <div class="featured-services">
-        <article class="featured-card">
-          <h3>💾 Odzyskiwanie danych</h3>
-          <p>
-            Pomoc w odzyskiwaniu utraconych plików, analizie nośników
-            i problemach z dostępem do danych. Wstępna ocena możliwości
-            odzyskania danych przed rozpoczęciem prac.
-          </p>
-        </article>
+                <h1>Twoje dane.<br><span class="accent">Nasza technologia.</span></h1>
 
-        <article class="featured-card">
-          <h3>🗄️ Przetwarzanie danych</h3>
-          <p>
-            Analiza, porządkowanie, konwersja i automatyczne przetwarzanie
-            danych. Przygotowujemy rozwiązania ułatwiające pracę
-            z dużymi zbiorami informacji.
-          </p>
-        </article>
-      </div>
+                <p>
+                    Wspieramy w odzyskiwaniu i przetwarzaniu danych,
+                    tworzymy strony internetowe, aplikacje oraz rozwiązania
+                    informatyczne usprawniające codzienną pracę.
+                </p>
 
-      <h2 class="section-title">Pozostałe usługi IT</h2>
-
-      <div class="service-grid">
-        <article class="service-card">
-          <h3>🌐 Strony internetowe</h3>
-          <p>
-            Nowoczesne strony firmowe, wizytówki internetowe
-            i proste serwisy dopasowane do działalności klienta.
-          </p>
-        </article>
-
-        <article class="service-card">
-          <h3>💻 Aplikacje i oprogramowanie</h3>
-          <p>
-            Tworzenie aplikacji i narzędzi wspierających codzienną
-            pracę oraz indywidualne potrzeby biznesowe.
-          </p>
-        </article>
-
-        <article class="service-card">
-          <h3>⚙️ Automatyzacja procesów</h3>
-          <p>
-            Automatyzacja powtarzalnych zadań, integracja systemów
-            i ograniczanie ręcznej pracy.
-          </p>
-        </article>
-
-        <article class="service-card">
-          <h3>✓ Testowanie oprogramowania</h3>
-          <p>
-            Testy funkcjonalne, automatyzacja testów i kontrola jakości
-            aplikacji oraz systemów informatycznych.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section id="about">
-      <h2 class="section-title">O MorsData</h2>
-      <div class="about-content">
-        <p>
-          MorsData to inicjatywa łącząca praktyczne podejście do technologii
-          z doświadczeniem w tworzeniu i testowaniu oprogramowania.
-          Koncentrujemy się na danych, automatyzacji i rozwiązaniach IT,
-          które pomagają rozwiązywać konkretne problemy.
-        </p>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2 class="section-title">Skontaktuj się z nami</h2>
-
-      <div class="contact-content">
-        <p class="section-intro">
-          Masz problem z danymi lub pomysł na rozwiązanie IT?
-          Skontaktuj się z nami telefonicznie, mailowo lub przez formularz.
-        </p>
-
-        <div class="contact-details">
-
-          <div class="contact-card">
-            <h3>📍 Biuro</h3>
-            <p>
-              <a href="https://www.google.com/maps/search/?api=1&query=Starowiejska+35%2F7%2C+Gdynia"
-                 target="_blank" rel="noopener noreferrer">
-                Starowiejska 35/7<br>
-                Gdynia
-              </a>
-            </p>
-          </div>
-
-          <div class="contact-card">
-            <h3>📞 Telefon</h3>
-            <p>
-              <a href="tel:+48664467212">
-                +48 664 467 212
-              </a>
-            </p>
-          </div>
-
-          <div class="contact-card">
-            <h3>✉️ E-mail</h3>
-            <p>
-              <a href="mailto:MorsDataIt@gmail.com">
-                MorsDataIt@gmail.com
-              </a>
-            </p>
-          </div>
-
+                <a href="#kontakt" class="button">Skontaktuj się z nami</a>
+            </div>
         </div>
-
-        <form
-          class="contact-form"
-          action="https://formsubmit.co/MorsDataIt@gmail.com"
-          method="POST"
-        >
-          <h3>Napisz do nas</h3>
-
-          <input type="hidden" name="_subject" value="Nowe zapytanie ze strony MorsData">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="true">
-
-          <div class="form-group">
-            <label for="name">Imię i nazwisko</label>
-            <input
-              type="text"
-              id="name"
-              name="Imię i nazwisko"
-              placeholder="Wpisz swoje imię i nazwisko"
-              autocomplete="name"
-              required
-            >
-          </div>
-
-          <div class="form-group">
-            <label for="email">Adres e-mail</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="np. jan@example.com"
-              autocomplete="email"
-              required
-            >
-          </div>
-
-          <div class="form-group">
-            <label for="subject">Temat zapytania</label>
-            <input
-              type="text"
-              id="subject"
-              name="Temat"
-              placeholder="Czego dotyczy zapytanie?"
-              required
-            >
-          </div>
-
-          <div class="form-group">
-            <label for="message">Wiadomość</label>
-            <textarea
-              id="message"
-              name="Wiadomość"
-              placeholder="Opisz, w czym możemy pomóc..."
-              required
-            ></textarea>
-          </div>
-
-          <button type="submit" class="button">
-            Wyślij wiadomość
-          </button>
-
-          <p class="privacy-note">
-            Wysyłając formularz, przekazujesz podane dane w celu
-            obsługi zapytania. Wiadomość jest przetwarzana za
-            pośrednictwem zewnętrznej usługi FormSubmit.
-          </p>
-        </form>
-      </div>
     </section>
-  </main>
 
-  <footer>
-    © 2026 MorsData – Data & IT Solutions. Wszelkie prawa zastrzeżone.
-  </footer>
+    <section class="services" id="uslugi">
+        <div class="container">
+            <h2 class="section-title">Nasze <span class="accent">usługi</span></h2>
+
+            <p class="section-intro">
+                Łączymy wiedzę techniczną z praktycznym podejściem do danych
+                i oprogramowania. Pomagamy zarówno w pojedynczych zadaniach,
+                jak i w realizacji większych projektów IT.
+            </p>
+
+            <div class="service-grid">
+
+                <div class="service-card featured">
+                    <h3>Odzyskiwanie danych</h3>
+                    <p>
+                        Pomoc w przypadku utraty plików, przypadkowego usunięcia
+                        danych lub problemów z dostępem do nośników.
+                        Wstępna analiza sytuacji i ocena możliwości odzyskania informacji.
+                    </p>
+                </div>
+
+                <div class="service-card featured">
+                    <h3>Przetwarzanie danych</h3>
+                    <p>
+                        Porządkowanie, konwersja, analiza i transformacja danych.
+                        Automatyzacja powtarzalnych operacji oraz przygotowywanie
+                        informacji do dalszego wykorzystania.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Strony internetowe</h3>
+                    <p>
+                        Nowoczesne strony firmowe i wizytówki internetowe.
+                        Responsywne projekty, formularze kontaktowe oraz
+                        prezentacja oferty i usług.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Aplikacje i oprogramowanie</h3>
+                    <p>
+                        Tworzenie dedykowanych aplikacji i narzędzi
+                        informatycznych dopasowanych do potrzeb firmy.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Automatyzacja procesów</h3>
+                    <p>
+                        Ograniczanie ręcznej pracy poprzez automatyzację
+                        zadań, integrację systemów i usprawnianie przepływu danych.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Testowanie oprogramowania</h3>
+                    <p>
+                        Testy funkcjonalne, automatyzacja testów,
+                        weryfikacja API i kontrola jakości oprogramowania.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="o-firmie">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">O <span class="accent">MorsData</span></h2>
+
+                <p>
+                    MorsData to działalność skupiona na rozwiązaniach
+                    informatycznych, danych i oprogramowaniu.
+                </p>
+
+                <p>
+                    Stawiamy na praktyczne rozwiązania, indywidualne podejście
+                    i technologie, które pomagają uporządkować informacje,
+                    usprawnić procesy oraz rozwijać działalność naszych klientów.
+                </p>
+
+                <p>
+                    Realizujemy zarówno niewielkie projekty internetowe,
+                    jak i zadania wymagające wiedzy programistycznej,
+                    analitycznej oraz doświadczenia w testowaniu systemów IT.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="kontakt">
+        <div class="container">
+            <h2 class="section-title">Skontaktuj się <span class="accent">z nami</span></h2>
+
+            <p class="section-intro">
+                Masz pytanie, potrzebujesz pomocy z danymi lub szukasz
+                wykonawcy projektu IT? Napisz lub zadzwoń.
+            </p>
+
+            <div class="contact-grid">
+
+                <div class="contact-card">
+                    <h3>Adres</h3>
+                    <p>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Starowiejska+35%2F7%2C+81-363+Gdynia"
+                           target="_blank" rel="noopener noreferrer">
+                            Starowiejska 35/7<br>
+                            81-363 Gdynia
+                        </a>
+                    </p>
+                </div>
+
+                <div class="contact-card">
+                    <h3>Telefon</h3>
+                    <p>
+                        <a href="tel:+48664467212">+48 664 467 212</a>
+                    </p>
+                </div>
+
+                <div class="contact-card">
+                    <h3>E-mail</h3>
+                    <p>
+                        <a href="mailto:MorsDataIt@gmail.com">
+                            MorsDataIt@gmail.com
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="company-data">
+                <h3>Dane firmy</h3>
+                <p><strong>NIP:</strong> 9581599752</p>
+                <p><strong>REGON:</strong> 522918640</p>
+            </div>
+
+            <form class="contact-form"
+                  action="https://formsubmit.co/MorsDataIt@gmail.com"
+                  method="POST">
+
+                <h3>Wyślij wiadomość</h3>
+
+                <input type="hidden" name="_subject" value="Nowe zapytanie ze strony MorsData">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="true">
+
+                <input type="text"
+                       name="name"
+                       placeholder="Imię i nazwisko"
+                       required>
+
+                <input type="email"
+                       name="email"
+                       placeholder="Adres e-mail"
+                       required>
+
+                <input type="text"
+                       name="subject"
+                       placeholder="Temat wiadomości"
+                       required>
+
+                <textarea name="message"
+                          placeholder="Treść wiadomości"
+                          required></textarea>
+
+                <button type="submit" class="button">Wyślij wiadomość</button>
+
+                <p class="privacy-note">
+                    Dane podane w formularzu zostaną wykorzystane w celu
+                    obsługi zapytania. Formularz korzysta z zewnętrznej
+                    usługi FormSubmit.
+                </p>
+
+            </form>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+        © 2026 MorsData – Data & IT Solutions. Wszelkie prawa zastrzeżone.
+    </div>
+</footer>
 
 </body>
 </html>
