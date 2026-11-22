@@ -1,12 +1,387 @@
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MorsData - Strona internetowa</title>
+
+    <title>MorsData – Kompleksowe usługi IT</title>
+    <meta name="description" content="MorsData – tworzenie stron internetowych, aplikacji, automatyzacja procesów i testowanie oprogramowania, usługi odzyskiwania danych, przetwarzanie danych.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b1422;
+            color: #e8eef5;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1100px, 90%);
+            margin: auto;
+        }
+
+        header {
+            background: #101e30;
+            border-bottom: 1px solid #24374c;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav {
+            min-height: 76px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #35d6c0;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            font-size: 14px;
+            color: #bdc9d8;
+        }
+
+        .nav-links a:hover {
+            color: #35d6c0;
+        }
+
+        .hero {
+            padding: 110px 0 100px;
+            background:
+                radial-gradient(ellipse at 80% 30%,
+                #173b50 0%, transparent 55%),
+                #0b1422;
+        }
+
+        .eyebrow {
+            color: #35d6c0;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: clamp(38px, 6vw, 65px);
+            line-height: 1.12;
+            max-width: 800px;
+            margin-bottom: 25px;
+        }
+
+        h1 span {
+            color: #35d6c0;
+        }
+
+        .hero p {
+            color: #b5c2d1;
+            font-size: 18px;
+            max-width: 650px;
+            margin-bottom: 35px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #35d6c0;
+            color: #0b1422;
+            padding: 14px 27px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .button:hover {
+            background: #72ead8;
+            transform: translateY(-2px);
+        }
+
+        section {
+            padding: 85px 0;
+        }
+
+        .section-title {
+            font-size: 34px;
+            margin-bottom: 15px;
+        }
+
+        .section-description {
+            color: #aab8c9;
+            max-width: 650px;
+            margin-bottom: 40px;
+        }
+
+        .services {
+            background: #101e30;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+
+        .service-card {
+            background: #17283d;
+            border: 1px solid #263c53;
+            padding: 30px;
+            border-radius: 9px;
+            transition: 0.2s;
+        }
+
+        .service-card:hover {
+            border-color: #35d6c0;
+            transform: translateY(-4px);
+        }
+
+        .service-icon {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 12px;
+            font-size: 21px;
+        }
+
+        .service-card p {
+            color: #aab8c9;
+            font-size: 15px;
+        }
+
+        .about {
+            background: #0b1422;
+        }
+
+        .about-content {
+            max-width: 800px;
+        }
+
+        .about-content p {
+            color: #b5c2d1;
+            margin-bottom: 18px;
+        }
+
+        .contact {
+            background: #101e30;
+            text-align: center;
+        }
+
+        .contact .section-description {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        footer {
+            padding: 25px 0;
+            background: #080f19;
+            color: #8190a2;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        @media (max-width: 650px) {
+            nav {
+                flex-direction: column;
+                padding: 18px 0;
+            }
+
+            .nav-links {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                padding: 75px 0;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 65px 0;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Witaj na stronie MorsData!</h1>
-    <p>Nasza pierwsza strona internetowa już działa.</p>
+
+<header>
+    <div class="container">
+        <nav>
+            <a href="#" class="logo">Mors<span>Data</span></a>
+
+            <div class="nav-links">
+                <a href="#home">Start</a>
+                <a href="#services">Usługi</a>
+                <a href="#about">O nas</a>
+                <a href="#contact">Kontakt</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="eyebrow">MorsData · Technologie IT</div>
+
+            <h1>
+                Technologia, która
+                <span>pracuje dla Ciebie.</span>
+            </h1>
+
+            <p>
+                Tworzymy strony internetowe, aplikacje i rozwiązania
+                programistyczne. Automatyzujemy procesy i dbamy
+                o jakość oprogramowania.
+            </p>
+
+            <a href="#contact" class="button">
+                Porozmawiajmy o projekcie →
+            </a>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+
+            <h2 class="section-title">Nasze usługi</h2>
+
+            <p class="section-description">
+                Rozwiązania IT dopasowane do potrzeb Twojej firmy.
+                Od prostej strony internetowej po dedykowane
+                rozwiązania programistyczne.
+            </p>
+
+            <div class="service-grid">
+
+                <article class="service-card">
+                    <div class="service-icon">🌐</div>
+                    <h3>Strony internetowe</h3>
+                    <p>
+                        Nowoczesne strony wizytówki, serwisy firmowe
+                        i rozwiązania internetowe dopasowane
+                        do charakteru działalności.
+                    </p>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>Aplikacje i oprogramowanie</h3>
+                    <p>
+                        Projektowanie i tworzenie dedykowanych
+                        aplikacji oraz narzędzi wspierających
+                        codzienną pracę przedsiębiorstw.
+                    </p>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon">⚙️</div>
+                    <h3>Automatyzacja procesów</h3>
+                    <p>
+                        Automatyzowanie powtarzalnych zadań,
+                        integracja systemów i usprawnianie
+                        procesów biznesowych.
+                    </p>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon">✓</div>
+                    <h3>Testowanie oprogramowania</h3>
+                    <p>
+                        Testy funkcjonalne, automatyzacja testów
+                        i kontrola jakości aplikacji
+                        oraz systemów informatycznych.
+                    </p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container about-content">
+
+            <div class="eyebrow">Poznaj MorsData</div>
+
+            <h2 class="section-title">
+                Technologia bez zbędnych komplikacji.
+            </h2>
+
+            <p>
+                W MorsData łączymy wiedzę programistyczną
+                z praktycznym podejściem do rozwiązywania
+                problemów biznesowych.
+            </p>
+
+            <p>
+                Stawiamy na indywidualne podejście, funkcjonalność
+                i rozwiązania, które rzeczywiście odpowiadają
+                na potrzeby klientów.
+            </p>
+
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+
+            <div class="eyebrow">Kontakt</div>
+
+            <h2 class="section-title">
+                Masz pomysł na projekt?
+            </h2>
+
+            <p class="section-description">
+                Porozmawiajmy o tym, jak technologia może
+                pomóc rozwinąć Twoją firmę.
+            </p>
+
+            <a href="mailto:TWOJ_EMAIL" class="button">
+                Napisz do nas →
+            </a>
+
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+        © 2026 MorsData. Wszelkie prawa zastrzeżone.
+    </div>
+</footer>
+
 </body>
 </html>
