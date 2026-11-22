@@ -591,7 +591,7 @@
 
                 <h3>Wyślij wiadomość</h3>
 
-                <input type="hidden" name="_subject" value="Nowe zapytanie ze strony MorsData">
+		<input type="hidden" name="_subject" id="email-subject" value="Nowe zapytanie ze strony MorsData">
                 <input type="hidden" name="_template" value="table">
                 <input type="hidden" name="_captcha" value="true">
 
@@ -633,6 +633,18 @@
         © 2026 MorsData – Data & IT Solutions. Wszelkie prawa zastrzeżone.
     </div>
 </footer>
+<script>
+    const now = new Date();
 
+    const timestamp = now.getFullYear() + "-" +
+        String(now.getMonth() + 1).padStart(2, "0") + "-" +
+        String(now.getDate()).padStart(2, "0") + " " +
+        String(now.getHours()).padStart(2, "0") + ":" +
+        String(now.getMinutes()).padStart(2, "0") + ":" +
+        String(now.getSeconds()).padStart(2, "0");
+
+    document.getElementById("email-subject").value =
+        "MorsData – zapytanie " + timestamp;
+</script>
 </body>
 </html>
