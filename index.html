@@ -5,10 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>MorsData – Kompleksowe usługi IT</title>
-    <meta name="description" content="MorsData – tworzenie stron internetowych, aplikacji, automatyzacja procesów i testowanie oprogramowania, usługi odzyskiwania danych, przetwarzanie danych.">
+    <title>MorsData – Odzyskiwanie i przetwarzanie danych | Usługi IT</title>
+
+    <meta name="description"
+          content="MorsData – odzyskiwanie danych, przetwarzanie informacji, tworzenie stron internetowych, aplikacji i automatyzacja procesów IT.">
+
+    <meta name="theme-color" content="#0b1422">
 
     <style>
+        /* =================================
+           USTAWIENIA GLOBALNE
+        ================================= */
+
         * {
             margin: 0;
             padding: 0;
@@ -35,6 +43,10 @@
             width: min(1100px, 90%);
             margin: auto;
         }
+
+        /* =================================
+           NAWIGACJA
+        ================================= */
 
         header {
             background: #101e30;
@@ -73,11 +85,18 @@
             color: #35d6c0;
         }
 
+        /* =================================
+           SEKCJA GŁÓWNA
+        ================================= */
+
         .hero {
             padding: 110px 0 100px;
             background:
-                radial-gradient(ellipse at 80% 30%,
-                #173b50 0%, transparent 55%),
+                radial-gradient(
+                    ellipse at 80% 30%,
+                    #173b50 0%,
+                    transparent 55%
+                ),
                 #0b1422;
         }
 
@@ -122,8 +141,13 @@
             transform: translateY(-2px);
         }
 
+        /* =================================
+           SEKCJE
+        ================================= */
+
         section {
             padding: 85px 0;
+            scroll-margin-top: 75px;
         }
 
         .section-title {
@@ -133,12 +157,73 @@
 
         .section-description {
             color: #aab8c9;
-            max-width: 650px;
+            max-width: 700px;
             margin-bottom: 40px;
         }
 
+        /* =================================
+           GŁÓWNE USŁUGI – DANE
+        ================================= */
+
         .services {
             background: #101e30;
+        }
+
+        .featured-services {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .featured-card {
+            background: linear-gradient(
+                145deg,
+                #193b50,
+                #14283d
+            );
+            border: 1px solid #35d6c0;
+            border-radius: 12px;
+            padding: 35px;
+            min-height: 270px;
+            transition: 0.2s;
+        }
+
+        .featured-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px #0005;
+        }
+
+        .featured-card .service-icon {
+            font-size: 40px;
+            margin-bottom: 18px;
+        }
+
+        .featured-card h3 {
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .featured-card p {
+            color: #bdcbd8;
+        }
+
+        .featured-card .more {
+            display: inline-block;
+            color: #35d6c0;
+            margin-top: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* =================================
+           POZOSTAŁE USŁUGI IT
+        ================================= */
+
+        .secondary-title {
+            font-size: 23px;
+            margin-bottom: 22px;
+            color: #bdc9d8;
         }
 
         .service-grid {
@@ -175,6 +260,10 @@
             font-size: 15px;
         }
 
+        /* =================================
+           O FIRMIE
+        ================================= */
+
         .about {
             background: #0b1422;
         }
@@ -188,6 +277,10 @@
             margin-bottom: 18px;
         }
 
+        /* =================================
+           KONTAKT
+        ================================= */
+
         .contact {
             background: #101e30;
             text-align: center;
@@ -198,6 +291,10 @@
             margin-right: auto;
         }
 
+        /* =================================
+           STOPKA
+        ================================= */
+
         footer {
             padding: 25px 0;
             background: #080f19;
@@ -206,7 +303,12 @@
             text-align: center;
         }
 
+        /* =================================
+           WERSJA MOBILNA
+        ================================= */
+
         @media (max-width: 650px) {
+
             nav {
                 flex-direction: column;
                 padding: 18px 0;
@@ -222,150 +324,272 @@
                 padding: 75px 0;
             }
 
+            .featured-services,
             .service-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .featured-card {
+                padding: 25px;
             }
 
             section {
                 padding: 65px 0;
             }
+
+            .section-title {
+                font-size: 29px;
+            }
         }
+
     </style>
 </head>
 
 <body>
 
+<!-- =================================
+     NAGŁÓWEK I MENU
+================================= -->
+
 <header>
     <div class="container">
         <nav>
-            <a href="#" class="logo">Mors<span>Data</span></a>
+
+            <a href="#home" class="logo">
+                Mors<span>Data</span>
+            </a>
 
             <div class="nav-links">
                 <a href="#home">Start</a>
                 <a href="#services">Usługi</a>
-                <a href="#about">O nas</a>
+                <a href="#about">O firmie</a>
                 <a href="#contact">Kontakt</a>
             </div>
+
         </nav>
     </div>
 </header>
 
 <main>
 
+    <!-- =================================
+         STRONA GŁÓWNA
+    ================================= -->
+
     <section class="hero" id="home">
+
         <div class="container">
-            <div class="eyebrow">MorsData · Technologie IT</div>
+
+            <div class="eyebrow">
+                MorsData · Data & IT Solutions
+            </div>
 
             <h1>
-                Technologia, która
-                <span>pracuje dla Ciebie.</span>
+                Twoje dane.<br>
+                <span>Nasza technologia.</span>
             </h1>
 
             <p>
-                Tworzymy strony internetowe, aplikacje i rozwiązania
-                programistyczne. Automatyzujemy procesy i dbamy
-                o jakość oprogramowania.
+                Odzyskiwanie utraconych danych, ich przetwarzanie
+                i analiza. Tworzymy również oprogramowanie
+                oraz rozwiązania IT wspierające biznes.
             </p>
 
-            <a href="#contact" class="button">
-                Porozmawiajmy o projekcie →
+            <a href="#services" class="button">
+                Poznaj nasze usługi →
             </a>
+
         </div>
+
     </section>
 
+    <!-- =================================
+         USŁUGI
+    ================================= -->
+
     <section class="services" id="services">
+
         <div class="container">
 
-            <h2 class="section-title">Nasze usługi</h2>
+            <h2 class="section-title">
+                Nasze usługi
+            </h2>
 
             <p class="section-description">
-                Rozwiązania IT dopasowane do potrzeb Twojej firmy.
-                Od prostej strony internetowej po dedykowane
-                rozwiązania programistyczne.
+                Pracujemy z danymi i technologią.
+                Pomagamy odzyskiwać informacje,
+                przetwarzać je i wykorzystywać
+                w codziennej działalności.
             </p>
+
+            <!-- GŁÓWNE USŁUGI -->
+
+            <div class="featured-services">
+
+                <article class="featured-card">
+
+                    <div class="service-icon">💾</div>
+
+                    <h3>Odzyskiwanie danych</h3>
+
+                    <p>
+                        Pomagamy odzyskiwać utracone pliki
+                        i informacje z nośników danych.
+                        Analizujemy problemy z dostępem do danych
+                        i dobieramy odpowiednią metodę odzyskiwania.
+                    </p>
+
+                    <a href="#contact" class="more">
+                        Zapytaj o usługę →
+                    </a>
+
+                </article>
+
+                <article class="featured-card">
+
+                    <div class="service-icon">🗄️</div>
+
+                    <h3>Przetwarzanie danych</h3>
+
+                    <p>
+                        Przekształcanie, porządkowanie,
+                        konwersja i integracja danych.
+                        Przygotowujemy rozwiązania ułatwiające
+                        analizę i wykorzystanie informacji.
+                    </p>
+
+                    <a href="#contact" class="more">
+                        Zapytaj o usługę →
+                    </a>
+
+                </article>
+
+            </div>
+
+            <!-- POZOSTAŁE USŁUGI -->
+
+            <h3 class="secondary-title">
+                Pozostałe usługi IT
+            </h3>
 
             <div class="service-grid">
 
                 <article class="service-card">
+
                     <div class="service-icon">🌐</div>
+
                     <h3>Strony internetowe</h3>
+
                     <p>
-                        Nowoczesne strony wizytówki, serwisy firmowe
-                        i rozwiązania internetowe dopasowane
-                        do charakteru działalności.
+                        Strony wizytówki, serwisy firmowe
+                        i rozwiązania internetowe
+                        dopasowane do potrzeb przedsiębiorstw.
                     </p>
+
                 </article>
 
                 <article class="service-card">
+
                     <div class="service-icon">💻</div>
+
                     <h3>Aplikacje i oprogramowanie</h3>
+
                     <p>
                         Projektowanie i tworzenie dedykowanych
                         aplikacji oraz narzędzi wspierających
-                        codzienną pracę przedsiębiorstw.
+                        codzienną pracę firm.
                     </p>
+
                 </article>
 
                 <article class="service-card">
+
                     <div class="service-icon">⚙️</div>
+
                     <h3>Automatyzacja procesów</h3>
+
                     <p>
                         Automatyzowanie powtarzalnych zadań,
                         integracja systemów i usprawnianie
                         procesów biznesowych.
                     </p>
+
                 </article>
 
                 <article class="service-card">
+
                     <div class="service-icon">✓</div>
+
                     <h3>Testowanie oprogramowania</h3>
+
                     <p>
                         Testy funkcjonalne, automatyzacja testów
                         i kontrola jakości aplikacji
                         oraz systemów informatycznych.
                     </p>
+
                 </article>
 
             </div>
+
         </div>
+
     </section>
 
+    <!-- =================================
+         O FIRMIE
+    ================================= -->
+
     <section class="about" id="about">
+
         <div class="container about-content">
 
-            <div class="eyebrow">Poznaj MorsData</div>
+            <div class="eyebrow">
+                Poznaj MorsData
+            </div>
 
             <h2 class="section-title">
                 Technologia bez zbędnych komplikacji.
             </h2>
 
             <p>
-                W MorsData łączymy wiedzę programistyczną
+                MorsData to działalność technologiczna
+                łącząca wiedzę programistyczną
                 z praktycznym podejściem do rozwiązywania
-                problemów biznesowych.
+                problemów związanych z danymi i IT.
             </p>
 
             <p>
-                Stawiamy na indywidualne podejście, funkcjonalność
-                i rozwiązania, które rzeczywiście odpowiadają
-                na potrzeby klientów.
+                Stawiamy na indywidualne podejście,
+                funkcjonalność i rozwiązania,
+                które odpowiadają na rzeczywiste
+                potrzeby klientów.
             </p>
 
         </div>
+
     </section>
 
+    <!-- =================================
+         KONTAKT
+    ================================= -->
+
     <section class="contact" id="contact">
+
         <div class="container">
 
-            <div class="eyebrow">Kontakt</div>
+            <div class="eyebrow">
+                Kontakt
+            </div>
 
             <h2 class="section-title">
-                Masz pomysł na projekt?
+                Masz problem z danymi lub pomysł na projekt?
             </h2>
 
             <p class="section-description">
-                Porozmawiajmy o tym, jak technologia może
-                pomóc rozwinąć Twoją firmę.
+                Skontaktuj się z nami.
+                Porozmawiajmy o tym, jak możemy pomóc
+                w Twoim projekcie.
             </p>
 
             <a href="mailto:TWOJ_EMAIL" class="button">
@@ -373,14 +597,23 @@
             </a>
 
         </div>
+
     </section>
 
 </main>
 
+<!-- =================================
+     STOPKA
+================================= -->
+
 <footer>
+
     <div class="container">
+
         © 2026 MorsData. Wszelkie prawa zastrzeżone.
+
     </div>
+
 </footer>
 
 </body>
