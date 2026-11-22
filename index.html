@@ -184,17 +184,54 @@
     }
 
     .contact-content {
-      max-width: 700px;
+      max-width: 850px;
       margin: auto;
     }
 
+    .contact-details {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin: 30px 0;
+      text-align: left;
+    }
+
+    .contact-card {
+      background: #10263a;
+      border: 1px solid #1b4057;
+      border-radius: 10px;
+      padding: 22px;
+    }
+
+    .contact-card h3 {
+      color: #35d0c3;
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .contact-card p,
+    .contact-card a {
+      color: #b5c7d5;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-card a:hover {
+      color: #35d0c3;
+    }
+
     .contact-form {
-      margin-top: 30px;
+      margin-top: 35px;
       text-align: left;
       background: #10263a;
       border: 1px solid #1b4057;
       border-radius: 12px;
       padding: 30px;
+    }
+
+    .contact-form h3 {
+      color: #35d0c3;
+      font-size: 22px;
+      margin-bottom: 20px;
     }
 
     .form-group {
@@ -250,6 +287,12 @@
       background: #04101d;
       color: #8299aa;
       font-size: 14px;
+    }
+
+    @media (max-width: 750px) {
+      .contact-details {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 650px) {
@@ -392,17 +435,53 @@
 
     <section id="contact">
       <h2 class="section-title">Skontaktuj się z nami</h2>
+
       <div class="contact-content">
         <p class="section-intro">
           Masz problem z danymi lub pomysł na rozwiązanie IT?
-          Opisz, czego potrzebujesz — odpowiemy na Twoje zapytanie.
+          Skontaktuj się z nami telefonicznie, mailowo lub przez formularz.
         </p>
+
+        <div class="contact-details">
+
+          <div class="contact-card">
+            <h3>📍 Biuro</h3>
+            <p>
+              <a href="https://www.google.com/maps/search/?api=1&query=Starowiejska+35%2F7%2C+Gdynia"
+                 target="_blank" rel="noopener noreferrer">
+                Starowiejska 35/7<br>
+                Gdynia
+              </a>
+            </p>
+          </div>
+
+          <div class="contact-card">
+            <h3>📞 Telefon</h3>
+            <p>
+              <a href="tel:+48664467212">
+                +48 664 467 212
+              </a>
+            </p>
+          </div>
+
+          <div class="contact-card">
+            <h3>✉️ E-mail</h3>
+            <p>
+              <a href="mailto:MorsDataIt@gmail.com">
+                MorsDataIt@gmail.com
+              </a>
+            </p>
+          </div>
+
+        </div>
 
         <form
           class="contact-form"
           action="https://formsubmit.co/MorsDataIt@gmail.com"
           method="POST"
         >
+          <h3>Napisz do nas</h3>
+
           <input type="hidden" name="_subject" value="Nowe zapytanie ze strony MorsData">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_captcha" value="true">
